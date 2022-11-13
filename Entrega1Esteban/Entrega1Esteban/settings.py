@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Entrega1Esteban.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r".\Entrega1Esteban\Entrega1Esteban\Entrega1Esteban\templates"],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
