@@ -1,0 +1,18 @@
+Primer entrega de trabajo final
+Curso Python CODERHOUSE comision 44470
+Esteban Claudio
+
+a partir de la url http://127.0.0.1:8000/appvet/inicio/
+se accede a la pagina de inicio y desde ahi los botones:
+
+Clientes
+Mascotas
+Productos
+
+contienen listada la base de datos de cada uno con un boton de acceso al formulario para
+agregar una nueva entrada.
+
+el boton buscador permite buscar en productos el item "tipo" de producto y lo/los lista en caso de encontrar coincidencias.
+
+
+
