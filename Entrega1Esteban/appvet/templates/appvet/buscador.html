@@ -7,11 +7,15 @@
    
     <h2> BUSCADOR DE PRODUCTOS </h2>
     
-<form action="/aapvet/productos/" method="get">
+
+<form action="{% url 'vet-buscador-resultados' %}" method="GET">
+    <p>
+        Producto: <input type="text" name="tipo">
+        <input type="submit" value="Buscar!">
+    </p>
 
 
 </form>
-
 
 
 

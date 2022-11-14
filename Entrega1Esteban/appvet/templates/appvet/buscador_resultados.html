@@ -1,0 +1,16 @@
+{% extends 'appvet/base.html' %}
+
+{% block Contenido %}
+
+<h1> Resultados </h1>
+
+<ul>
+
+    {% for t in tipo %}
+        <li>{{t.tipo}}</li>
+    {% endfor %}
+
+</ul>
+
+
+{% endblock %}

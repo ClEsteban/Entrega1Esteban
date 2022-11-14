@@ -11,8 +11,9 @@ def vista_inicio(request):
     return render(request, "appvet/inicio.html")
 
 def vista_clientes(request):
-    return render(request, "appvet/clientes.html")
-
+    clientes = Cliente.objects.all()
+    return render(request, "appvet/clientes.html", {"cliente":clientes})
+    
 
 def vista_crear_cliente(request):
     if request.method == "POST":
@@ -57,6 +58,7 @@ def vista_crear_mascota(request):
 
 def vista_productos(request):
     productos = Producto.objects.all()
+    
     return render(request, "appvet/productos.html", {"producto":productos})
 
 def vista_crear_producto(request):
@@ -79,3 +81,10 @@ def vista_crear_producto(request):
 
 def vista_buscador(request):
     return render(request, "appvet/buscador.html")
+
+def vista_buscador_resultados(request):
+    tipo = request.GET["tipo"]
+
+    tipo = Producto.objects.filter(tipo__icontains = tipo)
+    return render(request, "appvet/buscador_resultados.html", {"tipo": tipo})
+    

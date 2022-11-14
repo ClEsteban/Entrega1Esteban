@@ -5,6 +5,14 @@
 <h1> CLIENTES </h1>
 <p> Estos son los clientes </p>
 
+<ul>
+
+    {% for c in cliente %}
+        <li>{{c.nombre}} - {{c.telefono}}</li>
+    {% endfor %}
+
+</ul>
+
 <a href="{% url 'vet-crear-cliente' %}">Crear Cliente</a>
 
 </form>
