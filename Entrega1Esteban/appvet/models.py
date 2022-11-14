@@ -10,7 +10,7 @@ class Mascota(models.Model):
     nombre = models.CharField(max_length=20)
     especie = models.CharField(max_length=20)
     raza = models.CharField(max_length=20)
-    edad = models.DateField()
+    edad = models.IntegerField()
 
 class Producto(models.Model):
     tipo = models.CharField(max_length=20)

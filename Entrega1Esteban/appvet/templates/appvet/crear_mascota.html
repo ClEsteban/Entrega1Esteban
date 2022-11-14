@@ -1,0 +1,29 @@
+{% extends 'appvet/base.html' %}
+
+{% block Contenido%}
+
+<h3> Añadir Cliente </h3>
+<form action="/appvet/mascotas/crear/" method="POST">
+    {% csrf_token %}
+    
+    <table>
+        <p>
+            Nombre: <input type="text" name="nombre">        
+        </p>
+    
+        <p>
+            Especie: <input type="text" name="especie">        
+        </p>
+        <p>
+            Raza: <input type="text" name="raza">        
+        </p>
+    
+        <p>
+            Edad: <input type="number" name="edad">        
+        </p>
+        <input type="submit" value="Crear Mascota">
+    </table>
+
+</form>
+
+{% endblock %}

@@ -1,8 +1,23 @@
 {% extends 'appvet/base.html' %}
 
+{% load static %}
+
 {% block Contenido%}
 
-<h2> PRODUCTOS </h2>
-<p> Estos son los productos </p>
+   
+    <h2> PRODUCTOS </h2>
+    <p> Estos son los productos </p>
+<form>
+    <ul>
+
+        {% for p in producto %}
+            <li>{{producto}}</li>
+        {% endfor %}
+    
+    </ul>
+
+</form>
+
+<a href="{% url 'vet-crear-producto' %}">Añadir Producto</a>
 
 {% endblock %}

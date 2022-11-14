@@ -5,4 +5,14 @@
 <h2> MASCOTAS </h2>
 <p> Estas son las mascotas </p>
 
+<ul>
+
+    {% for m in mascota %}
+        <li>{{mascota}}</li>
+    {% endfor %}
+
+</ul>
+
+<a href="{% url 'vet-crear-mascota' %}">Crear Mascota</a>
+
 {% endblock %}
