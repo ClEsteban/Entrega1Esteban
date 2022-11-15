@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Cliente(models.Model):
-    nombre = models.CharField(max_length=20)
+    nombre = models.CharField(min_length=3,max_length=20)
     telefono = models.IntegerField()
 
 class Mascota(models.Model):

@@ -1,7 +1,7 @@
 from django import forms
 
 class ClienteFormulario(forms.Form):
-    nombre = forms.CharField()
+    nombre = forms.CharField(min_length=3,max_length=20) #se puede poner maximo y minimo para validar en el formulario
     telefono = forms.IntegerField()
 
 class MascotaFormulario(forms.Form):
