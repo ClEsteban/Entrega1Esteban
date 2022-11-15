@@ -83,11 +83,7 @@ def vista_crear_producto(request):
 
 # BUSCADOR-------------------------------------------------------------------------
 def vista_buscador(request):
-    return render(request, "appvet/buscador.html")
-
-def vista_buscador_resultados(request):
-    tipo = request.GET["tipo"]
-
-    tipo = Producto.objects.filter(tipo__icontains = tipo)
-    return render(request, "appvet/buscador_resultados.html", {"tipo": tipo})
-    
+    if request.GET:
+        tipo = Producto.objects.filter(tipo__icontains = request.GET["tipo"])
+        return render(request, "appvet/buscador.html", {"tipo": tipo})
+    return render(request, "appvet/buscador.html", {"tipo":[]})

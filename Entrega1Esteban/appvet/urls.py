@@ -10,5 +10,4 @@ urlpatterns = [
     path('productos/', vista_productos, name="vet-productos"),
     path('productos/crear/', vista_crear_producto, name="vet-crear-producto"),
     path('buscador/', vista_buscador, name="vet-buscador"),
-    path('buscador/resultados/', vista_buscador_resultados, name="vet-buscador-resultados"),
 ]
