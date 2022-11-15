@@ -2,6 +2,9 @@ Primer entrega de trabajo final
 Curso Python CODERHOUSE comision 44470
 Esteban Claudio
 
+VETERINARIA PERRY TOWS
+Modelo de Pagina para una veterinaria con seguimiento de cliente y sus mascotas, ademas de listado y buscador de productos con su marca y precio.
+
 a partir de la url http://127.0.0.1:8000/appvet/inicio/
 se accede a la pagina de inicio y desde ahi los botones:
 
