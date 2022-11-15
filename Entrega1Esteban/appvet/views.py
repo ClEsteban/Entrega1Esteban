@@ -7,13 +7,14 @@ from appvet.forms import *
 
 # Create your views here.
 
+#vista de la pagina inicio
 def vista_inicio(request):
     return render(request, "appvet/inicio.html")
 
+#CLIENTES-------------------------------------------------------------------------
 def vista_clientes(request):
     clientes = Cliente.objects.all()
     return render(request, "appvet/clientes.html", {"cliente":clientes})
-    
 
 def vista_crear_cliente(request):
     if request.method == "POST":
@@ -33,7 +34,7 @@ def vista_crear_cliente(request):
     contexto = {"formulario": formulario}
     return render(request, "appvet/crear_cliente.html", contexto)
 
-
+# MASCOTAS-------------------------------------------------------------------------
 def vista_mascotas(request):
     mascotas = Mascota.objects.all()
     return render(request, "appvet/mascotas.html", {"mascota":mascotas})
@@ -47,15 +48,16 @@ def vista_crear_mascota(request):
         #recuperamos los datos del atributo cleaned_data
             data = formulario.cleaned_data
 
-            cliente = Mascota(nombre = data["nombre"], especie = data["especie"], raza = data["raza"], edad = data["edad"])
+            mascota = Mascota(nombre = data["nombre"], especie = data["especie"], raza = data["raza"], edad = data["edad"])
 
-            cliente.save()
+            mascota.save()
  
     formulario = MascotaFormulario()
 
     contexto = {"formulario": formulario}
     return render(request, "appvet/crear_mascota.html",contexto)
 
+# PRODUCTOS-------------------------------------------------------------------------
 def vista_productos(request):
     productos = Producto.objects.all()
     
@@ -70,15 +72,16 @@ def vista_crear_producto(request):
         #recuperamos los datos del atributo cleaned_data
             data = formulario.cleaned_data
 
-            cliente = Producto(tipo = data["tipo"], marca = data["marca"], precio = data["precio"])
+            producto = Producto(tipo = data["tipo"], marca = data["marca"], precio = data["precio"])
 
-            cliente.save()
+            producto.save()
  
     formulario = ProductoFormulario()
 
     contexto = {"formulario": formulario}
     return render(request, "appvet/crear_producto.html", contexto)
 
+# BUSCADOR-------------------------------------------------------------------------
 def vista_buscador(request):
     return render(request, "appvet/buscador.html")
 

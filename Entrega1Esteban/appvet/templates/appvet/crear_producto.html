@@ -3,21 +3,12 @@
 {% block Contenido%}
 
 <h3> Añadir Cliente </h3>
-<form action="/appvet/productos/crear/" method="POST">
+<form action="" method="POST"> <!-- el action se puede dejar vacio si se va a trabajar sobre la misma vista, los datos POST se envian a la vista donde se esta -->
     {% csrf_token %}
     
     <table>
-        <p>
-            Tipo de producto: <input type="text" name="tipo">        
-        </p>
-    
-        <p>
-            Marca: <input type="text" name="marca">        
-        </p>
-
-        <p>
-            Precio: <input type="number" name="precio">        
-        </p>
+        
+        {{ formulario.as_p }}
     
         <input type="submit" value="Añadir Producto">
     </table>
