@@ -16,13 +16,15 @@
 </form>
 
 {% if tipo %}
-<h1> Resultados: </h1>
+<h4> Resultados: </h4>
 <ul>
     {% for t in tipo %}
     
         <li>{{t.tipo}} - Marca: {{t.marca}} - Precio: ${{t.precio}}</li>
     {% endfor %}
-</ul>
+</ul>  
+    {% else %}
+        <h5> No hay coincidencias </h5>
 {% endif %}
 
 
